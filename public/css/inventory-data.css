@@ -1,0 +1,253 @@
+/* @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100); */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+body {
+  background-color: #3e94ec;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+h1{
+    text-align: center;
+    font-size: 27px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+    padding: 30px 0;
+}
+
+
+
+/*** Table Styles **/
+
+.styled-table{
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 150px;
+  margin: auto;
+  padding:5px;
+  width: 80%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+ 
+th {
+  color:#D5DDE5;;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+  font-weight: 100;
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+  border-style : hidden!important;
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+ 
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+}
+ 
+tr:first-child {
+  border-top:none;
+}
+
+tr:last-child {
+  border-bottom:none;
+}
+ 
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+ 
+tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+ 
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+  border-style : hidden!important;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}
+
+.btn-slide { 
+    position: relative;
+    display: inline-block; 
+    height: 50px;
+    width: 240px;
+    line-height: 50px;
+    margin: 25px 0;
+    padding: 0px;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,0.7);
+    background: linear-gradient(135deg, #9900F0 0%,#4700D8 100%);
+        }
+        
+.btn-slide:active { 
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0,0.7);
+    -webkit-transform: scale(0.98);
+    transform: scale(0.96); }
+    
+.btn-slide:hover { 
+    background: linear-gradient(-135deg, #332FD0 0%,#0002A1 100%); }
+        
+.btn-slide span.circle { 
+    display: block;
+    background-color: #fff;
+    color: #708ee7;
+    position: absolute;
+    margin: 5px;
+    height: 40px; 
+    width: 40px;
+    top: 0; left: 0;
+    border-radius: 50%;
+    transition: all 1.5s ease;
+ }
+        
+.btn-slide:hover span.circle { 
+    left: 100%;
+    margin-left: -45px;
+    background-color: #fff;
+    color: #79f1fc; }
+        
+.btn-slide span.title { 
+    position: absolute;
+    left: 85px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+    transition: all 1.5s linear; 
+ }
+        
+.btn-slide span.title-hover { opacity: 0;}
+.btn-slide:hover span.title { opacity: 0; }
+.btn-slide:hover span.title-hover { opacity: 1; left: 60px; }   
+    
+ul {
+    position: fixed;
+    right: 1px;
+    left: 1px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #666;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+  }
+  
+  li {
+    float:left;
+    
+  }
+  
+  li a {
+    font-size: 24px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 23px 23px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+  li.logout{
+    position: relative;
+    left: 37%;
+  }
+  input{
+    position: relative;
+    left: 45%;
+    font-size: 20px;
+    border-radius: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  input:hover{
+    transition: 0.8s;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+  }
+
+  .Existing{
+    position:static;
+    bottom: 3%;
+    right: -0px;
+
+  }
+  p{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+  }
+  .aa{
+    width: 50%;
+  }

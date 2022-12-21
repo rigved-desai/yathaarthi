@@ -1,0 +1,40 @@
+<head><link href="/css/transaction.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="/images/faviconico">
+    <title>Transaction</title>
+</head>
+<% if(session.user_id == 1)  {%>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+        <nav class="f"> 
+            <ul>
+                <li><a href="/shopdashboard">Dashboard</a></li>
+                <li><a href="/custdata">Customer Data</a></li>
+                <li><a href="/ledger">Ledger </a></li>
+                <li><a href="/addtransaction">Add New Transaction</a></li>
+                <li class="logout"><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+        </div>
+        </nav>
+<% } %>  
+
+<h1>Trasaction ID: <%= values[0].trans_id%>  </h1>
+<h2>Customer ID: <%= values[0].trans_cust_id %> </h2>
+<h2>Transaction Date and Time: <%= values[0].trans_date %> </h2>
+<table class="styled-table">
+    <tr>
+        <th>Item ID</th>
+        <th>Item Name</th>
+        <th>Quantity</th>
+        <th>Cost</th>
+    </tr>
+    <% for(let i = 0; i <values.length; i++)  { %>
+    <tr>
+        <td> <%= values[i].trans_item_id %>  </td>
+        <td> <%= values[i].item_name %>  </td>
+        <td> <%= values[i].trans_item_quantity %>  </td>
+        <td> ₹<%= values[i].trans_cost %>  </td>
+    </tr>
+    <% } %> 
+</table>
+<h2 style="margin-left: 32rem;">Total cost of this transaction is: ₹<%=total %> </h2>

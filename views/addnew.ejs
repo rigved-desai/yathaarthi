@@ -1,0 +1,44 @@
+
+<head>
+    <link href="/css/addnew.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Add New Items</title>
+</head>
+
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+    <nav class="f"> 
+        <ul>
+            <li><a href="/shopdashboard">Dashboard</a></li>
+            <li><a href="/custdata">Customer Data</a></li>
+            <li><a href="/ledger">Ledger </a></li>
+            <li><a href="/addtransaction">Add New Transaction</a></li>
+            <li class="logout"><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+    </div>
+    </nav>
+
+
+<div class="login">
+    <h1>Add new items into inventory here</h1>
+<form action = '/addnew', method = 'POST'>
+    <label for='itemname'> Item Name:
+        <input type = 'text', id = 'name', name = 'item_name'>
+    </label>
+
+    <label for = 'cost'> Item Cost
+        <input type = 'number', id = 'cost',  min="0" oninput="validity.valid||(value='')", name = 'item_cost'>
+    </label>
+
+    <label for= 'quantity'> Item Quantity
+        <input type = 'number', id = 'quantity', min="0" oninput="validity.valid||(value='')", name = 'item_quantity'>
+    </label>
+    <br><br>
+    <input  class="submit" type = 'submit' value = 'Add New Item'>
+</form>
+<a  class="data" title="Click here to view inventory data!" href = '/inventory-data'>Inventory data!</a>
+<br>
+<a class="add" href = '/add-items'  title="Click here to add existing items!"> Add items!</a>
+</div>
+<br>

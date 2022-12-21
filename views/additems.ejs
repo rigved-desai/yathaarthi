@@ -1,0 +1,63 @@
+<head><link href="/css/additems.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Add Existing Items</title>
+</head>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+    <nav class="f"> 
+        <ul>
+            <li><a href="/shopdashboard">Dashboard</a></li>
+            <li><a href="/custdata">Customer Data</a></li>
+            <li><a href="/ledger">Ledger </a></li>
+            <li><a href="/addtransaction">Add New Transaction</a></li>
+            <li class="logout"><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+    </div>
+    </nav>
+    <h1>The inventory data is as follows:</h1>
+<br>
+<table class="styled-table">
+<form method='POST', action="/additems" id = 'form1'>
+    <tr>
+        <th>Item ID</th>
+        <th>Item Name</th>
+        <th>Item Cost</th>
+        <th>Item Quantity</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <% for (let i = 0; i < values.length; i++)  {%>
+        <tr>
+            <td><%= values[i].item_id %></td>
+            <td><%= values[i].item_name %></td>
+            <td>₹<%= values[i].item_cost %></td>
+            <td><%= values[i].item_quantity %></td>
+            <td><button type = 'button' id = '<%= values[i].item_id%>' onclick="showTextBox(id)">Add Items</button></td>
+            <td style="border: none;">
+                    <input class="number" id = 'item<%=values[i].item_id%>', min="0" oninput="validity.valid||(value='')", type = 'number' name = 'item<%=values[i].item_id%>'  /hidden>
+                </td>
+            </tr>
+            
+            <% } %>
+        </table>
+    </form>
+<br>
+<input class="addition" type = "submit", value = "Confirm Addtion", form = 'form1'>
+<br>
+<br>
+<a  class="data" title="Click here to view inventory data!" href = '/inventory-data'>Inventory Data!</a>
+<br>
+<a class="add" href = '/addnew'  title="Click here to add new items!">New Items!</a>
+
+
+<script>
+    var values = '<%- JSON.stringify(values) %>';
+    function showTextBox(id) {
+        if (document.getElementById(`item${id}`)) {
+            document.getElementById(`item${id}`).style.display = 'block';
+        } 
+    }
+</script>
+

@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+
+   * {
+    margin: 0;
+    padding: 0;
+  }
+/*   
+  nav {
+    position: absolute;
+    top: "your percentage";
+    left:0;
+    right:0;
+    margin:0 auto;
+    border: solid;
+} */
+ h1{
+  color: whitesmoke;
+  font-size: 50px;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+ }
+  body {
+    background: #0A122A;
+    text-decoration: none;
+  
+  }
+  
+  .wrapper {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    right: 0;
+    margin:0 auto;
+    text-decoration: none;
+  
+ }
+  
+ .wrapper ul {
+    list-style: none;
+  }
+  
+  .wrapper ul li {
+    width: 175px;
+    height: 175px;
+    line-height: 175px;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 5px solid #D8E2DC;
+    float: left;
+    transition: all 0.5s ease;
+  }
+
+  .wrapper ul li .fa {
+    color: #D8E2DC;
+    margin-top: 20px;
+    transition: all 0.5s ease;
+  }
+  .wrapper ul li:hover.custdata {
+    border: 5px solid #25eac9;
+    box-shadow: 0 0 15px #25eac9;
+    transition: all 0.5s ease;
+    
+  }
+  
+  .wrapper ul li:hover .fa-users {
+    color: #25eac9;
+    text-shadow: 0 0 15px #25eac9;
+    transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover.Inventory {
+    border: 5px solid #00aced;
+    box-shadow: 0 0 15px #00aced;
+    transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-desktop {
+    color: #00aced;
+    text-shadow: 0 0 15px #00aced;
+    transition: all 0.5s ease;
+  }
+  
+  
+  .wrapper ul li:hover.transaction {
+    border: 5px solid #fff346;
+    box-shadow: 0 0 15px #dd4b39;
+    transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-money-bill-transfer{
+    color: #fff346;
+    text-shadow: 0 0 15px #fff346;
+    transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover.logout {
+    border: 5px solid red;
+    box-shadow: 0 0 15px red;
+    transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-door-open{
+    color: red;
+    text-shadow: 0 0 15px red;
+    transition: all 0.5s ease;
+  }
+  .wrapper ul li:hover.home {
+    border: 5px solid #4dc247;
+    box-shadow: 0 0 15px #4dc247;
+    transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-house-user{
+    color: #4dc247;
+    text-shadow: 0 0 15px #4dc247;
+    transition: all 0.5s ease;
+  }
+  .wrapper ul li:hover.add {
+    border: 5px solid #dd4b39;
+    box-shadow: 0 0 15px #dd4b39;
+    transition: all 0.5s ease;
+
+  }
+  
+  .wrapper ul li:hover .fa-circle-plus{
+    color: #dd4b39;
+    text-shadow: 0 0 15px #dd4b39;
+    transition: all 0.5s ease;
+  }
+  
+  
+  /* media queries */
+  
+  /* @media screen and (max-width: 640px){
+    .wrapper {
+        width: 350px;
+    }
+    .wrapper ul li{
+        margin-top: 10px;
+    }
+    .wrapper ul li.transaction{
+        margin-left: 60px;
+    }
+  }
+  
+  
+  @media screen and (max-width: 340px){
+    .wrapper {
+        width: 150px;
+    }
+    .wrapper ul li{
+        margin:15px;
+    }
+    .wrapper ul li.transaction{
+        margin-left: 15px;
+    }
+  } */
+
+  
+i{
+  position: relative;
+  top: 5%;
+  font-size: 45px;
+
+  color: white;
+}
+i:hover{
+  font-size: 70px;
+}
+
+p{
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  position: relative;
+  top: -15%;
+  font-size: 21px;
+  text-decoration: none;
+  
+}
+.c1{
+  color: white;
+  transform: rotate(5deg);
+}
+.c2{
+  color: white;
+  transform: rotate(10deg);
+}
+.c3{
+  color: white;
+  transform: rotate(56deg);
+}
+
+p {
+  text-decoration: none;
+}
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+

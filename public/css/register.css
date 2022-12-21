@@ -1,0 +1,109 @@
+h2{
+    position: fixed;
+    padding-left: 5%;
+    font-size: 30px;
+    top: -1%;
+   
+}
+.login{
+    /* background-image: url('pika4.jpg'); */
+    /* background-repeat: no-repeat;
+    background-position: center; */
+    height: 650px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+    font-size: 16;
+    /* z-index: -1; */
+    
+}
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -85px;
+    top: -120px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: -100px;
+    bottom: -110px;
+}
+body{
+    background-color: whitesmoke ;
+    /* background-image: url('pika4.jpg');
+    background-position: center;
+    background-repeat: no-repeat; */
+    /* background-image: url(''); */
+   
+}
+button{
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+}
+button:hover{
+    transition: .4s; 
+    background-color: #43dbad;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 30px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 25px;
+    font-weight: 300;
+}
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: 500;
+
+}
+input[type=submit]{
+    border-radius: 0%;
+    background-color: #ffffff;
+     cursor: pointer;
+} 
+input[type=submit]:hover{
+    transition: .6s; 
+    background-color: #45cbec;
+}

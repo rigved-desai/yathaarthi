@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/css/register.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+   
+    <div class = "login">
+        <h2>Register for Yathaarthi: </h2>
+    <form action = '/register' method = "POST" >
+        <label for="name"> Name
+            <input type = "text" id = "name", name = "name" required>
+        </label>
+        <label for="uname"> Username
+        <input type = "text" id = "uname", name = "username" required>
+        </label>
+        <label for="em"> Email
+            <input type = "email" id = "em" name = "email" required>
+        </label>
+        <label for="pass"> Password
+            <input type = "password" id = "pass" name = "pw" required>
+        </label>
+        <label for="num"> Contact Number
+            <input type = "number". min="0" oninput="validity.valid||(value='')",  id = "num" name = "number">
+        </label>
+        <p>Fields marked with dotted red are compulsory to be filled</p>
+        <input type = "submit" value="Register" >
+    </form>
+</div>
+</body>
+</html>

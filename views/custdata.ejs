@@ -1,0 +1,48 @@
+<head>
+    <link href="/css/customer-data.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Customer Data</title>
+</head>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+    <nav class="f"> 
+        <ul>
+            <li><a href="/shopdashboard">Dashboard</a></li>
+            <li><a href="/custdata">Customer Data</a></li>
+            <li><a href="/ledger">Ledger </a></li>
+            <li><a href="/addtransaction">Add New Transaction</a></li>
+            <li class="logout"><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+    </div>
+    </nav>
+    <br><br>
+<h1>The customer data is as follows:</h1>
+<br>
+<div class="rig">
+<table class="styled-table" border="1px solid black">
+    <thead>
+    <tr>
+        <th>Customer Name</th>
+        <th>Customer Username</th>
+        <th>Customer Phone Number</th>
+        <th>Customer Points</th>
+        <th>Customer Amount Spent</th>
+        <th></th>
+    </tr>
+</thead>
+    <% for (let i = 0; i < values.length; i++)  {%>
+        <tbody>
+        <tr>
+            <td><%= values[i].cust_name %></td>
+            <td><%= values[i].cust_username %></td>
+            <td><%= values[i].cust_number %></td>
+            <td><%= values[i].cust_points %></td>
+            <td><%= values[i].cust_amount_spent %></td>
+            <td><form action = '/custdata', method="post"><button type = 'submit' value = '<%= values[i].cust_username %>', name = 'user'>Delete User</button></form></td>
+        </tr>
+    </tbody>
+    <% } %>
+</table>
+</div>
+<br>

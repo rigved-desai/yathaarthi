@@ -1,0 +1,48 @@
+<head>
+    <link href="/css/ledger.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Ledger</title>
+</head>
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<nav class="f"> 
+    <ul>
+        <li><a href="/shopdashboard">Dashboard</a></li>
+        <li><a href="/custdata">Customer Data</a></li>
+        <li><a href="/ledger">Ledger </a></li>
+        <li><a href="/addtransaction">Add New Transaction</a></li>
+        <li class="logout"><a href="/logout">Logout</a></li>
+    </ul>
+</nav>
+</div>
+</nav>
+<br>
+<br>
+<br>
+
+<h1>Ledger:</h1>
+<br>
+<table class="styled-table">
+    <tr>
+        <th>Transaction ID</th>
+        <th>Customer ID</th>
+        <th>Transaction Cost</th>
+        <th>Date of Transaction</th>
+    </tr>
+    <% for (let i = 0; i < values.length; i++)  {%>
+        
+        <tr>
+            <td class = 'num'><a href = '/ledger/<%=values[i].trans_id%>'><%= values[i].trans_id %></a></td>
+            <td class = 'num'><%= values[i].trans_cust_id %></td>
+            <td class = 'num'>₹<%=values[i].total_cost %> </td>
+            <td><%= values[i].trans_date %></td>
+        </tr>
+        <% } %>
+    </table>
+<br>
+<br>
+
+<p><span>NOTE:</span> Click on an <span>individual transaction</span> to view all the items present in it!</p>
+
+
+

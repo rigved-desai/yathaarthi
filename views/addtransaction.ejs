@@ -1,0 +1,75 @@
+<head>
+    <link href="/css/addtransaction.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Add New Transaction</title>
+    </head>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+    <nav class="f"> 
+        <ul>
+            <li><a href="/shopdashboard">Dashboard</a></li>
+            <li><a href="/custdata">Customer Data</a></li>
+            <li><a href="/ledger">Ledger </a></li>
+            <li><a href="/addtransaction">Add New Transaction</a></li>
+            <li class="logout"><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+    </div>
+    </nav>
+    <br><br>
+
+<br>
+<br><br>
+
+<form id = 'form1', method = 'POST'>
+
+
+<table class="styled-table" >
+    <h1>Transaction Form:</h1>
+        <tr>
+            <th>Item ID</th>
+            <th>Item Name</th>
+            <th>Item Cost</th>
+            <th>Items In Stock</th>
+            <th>Item Quantity</th>
+            <th>Include Item</th>
+        </tr>
+        <% for (let i = 0; i < values.length; i++)  {%>
+            <tr>
+                <td><%= values[i].item_id %></td>
+                <td><%= values[i].item_name %></td>
+                <td>₹<%= values[i].item_cost %></td>
+                <td><%= values[i].item_quantity %></td>
+                <td><input class="number" id = 'item<%=values[i].item_id%>', type = 'number' name = 'name<%=values[i].item_id%>'></td>
+                <td><input type = 'checkbox', id = 'box<%=values[i].item_id%>', name = 'check<%=values[i].item_id%>' /required></td>
+                <% } %>
+            </table>
+</form>
+
+            <br>
+<button type = 'submit', onclick = 'checkdata()'>CONTINUE</button>
+
+<script>
+    var values = '<%-JSON.stringify(values)%>';
+    var len = JSON.parse(values);
+    function checkdata() {
+        for(let i = 1; i<=len.length; i++) {
+            var it = document.getElementById("item"+i);
+            var check = document.getElementById("box"+i);
+            if(it.value === '' && check.checked === true ) {
+                alert("Please specify the quantity of the items you wish to add to the transaction.")
+                return;
+            }
+            else if(it.value != '' && check.checked == false ) {
+                alert('Please check the boxes of the items you wish to include!')
+                return;
+            }
+            else if(it.value != '' && it.value > len[i-1].item_quantity) {
+                alert('You do not have sufficient stock of the following item: '+len[i-1].item_name);
+                return;
+            }
+        }
+        document.getElementById('form1').submit();
+    }
+</script>
+

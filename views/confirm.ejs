@@ -1,0 +1,75 @@
+<head>
+    <link href="/css/confirm.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Confirm Transaction</title>
+</head>
+
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+    <nav class="f"> 
+        <ul>
+            <li><a href="/shopdashboard">Dashboard</a></li>
+            <li><a href="/custdata">Customer Data</a></li>
+            <li><a href="/ledger">Ledger </a></li>
+            <li><a href="/addtransaction">Add New Transaction</a></li>
+            <li class="logout"><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+    </div>
+    </nav>
+    <br><br>
+
+
+
+<table class="styled-table">
+
+    <h1>Confirm your transaction!</h1>
+    <br>
+    <br>
+    <tr>
+        <th>Item ID</th>
+        <th>Item Name</th>
+        <th>Item Quantity</th>
+        <th>Total Cost</th>
+    </tr>
+    <% for (let i =0; i<values.length; i++)  { %>
+        <tr>
+            <td><%=values[i].item_id %> </td>
+            <td><%=values[i].item_name %> </td>
+            <td><%=values[i].Quantity %> </td>
+            <td>₹<%=values[i].Total_Cost %> </td>
+        </tr> 
+        <% } %>  
+</table>
+<div class="payok">
+<h2>Total cost of transaction is equal to: ₹<%= total_cost %> </h2>
+
+<form id = 'pay', method = 'POST', action="/result">
+    <label for = 'cust'> Enter customer username
+    <input type = 'text', id = 'username', name = 'cust_username'/required>
+    </label>
+    <% for (let i = 0; i<values.length; i++) { %>
+    <input style = 'display: none; visibility: hidden; position: absolute;', name = 'item<%=(i+1)%>', value ='<%=values[i].item_id%>'>
+    <input style = 'display: none; visibility: hidden;  position: absolute;', name = 'quantity<%=(i+1)%>', value = '<%=values[i].Quantity%>' /hidden>
+    <input style = 'display: none; visibility: hidden;  position: absolute;', name = 'cost_of_item<%=(i+1)%>', value = '<%=values[i].Total_Cost%>' /hidden>
+    <% } %>
+    <input style = 'display: none; visibility: hidden; position: absolute;', id = 'cust', name = 'total_cost', value = '<%=total_cost%>'>  
+    <input style = 'display: none; visibility: hidden;  position: absolute;', type = 'text', id = 'via', name = 'via'>
+    
+</form>
+<input class="cash" type = 'button' onclick = "byCash()", value = 'Pay With Cash'>
+<br>
+<input class="points" type = 'button' onclick = "byPoints()", value = 'Pay With Points'>
+</div>
+<script>
+    function byCash() {
+        var via = document.getElementById('via')
+        via.setAttribute('value', 'cash');
+        document.getElementById('pay').submit();
+    }
+    function byPoints() {
+        var via = document.getElementById('via')
+        via.setAttribute('value', 'points');
+        document.getElementById('pay').submit();
+    }
+</script>
