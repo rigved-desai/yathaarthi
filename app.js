@@ -14,8 +14,8 @@ const session = require('express-session');
 //Establishing connection with database
 var con = mysql.createConnection({
   host: 'localhost',
-  user: 'root',
-  password: '7714',
+  user: process.env.USER, 
+  password: process.env.PASSWORD,
   database: 'shopdatabase',
   multipleStatements: true
 });
@@ -824,32 +824,3 @@ app.get('/logout', function(req, res){
   res.redirect('/login');
   req.session.destroy();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
