@@ -36,6 +36,12 @@ Download the files and run the script.sql file in your MySQL WorkBench. Then edi
 node app.js
 ```
 
+Type in the following URL in your browser to access the web portal.
+
+```
+http://localhost:3000/
+```
+
 ## Further Information
 
 This project was created as a course project for the course "Database Management System - I" in semester 3. You can download the project report to view the database design, screenshots of the project and futher details [here.](https://github.com/rigved-desai/yathaarthi/raw/master/Project_Report.pdf)
