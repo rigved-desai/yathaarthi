@@ -18,6 +18,7 @@ Yathaarthi is a very easy to use **Shop Inventory, Transaction and Customer Loya
 ### Customers can:
 
 -create account on the portal
+
 -view their current points count and transaction history
 
 ## Tech Stack
